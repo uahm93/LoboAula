@@ -3,14 +3,13 @@
 
 <head>
     <?php
-         
-         session_start();
-         include("conexion.php");
-         if(isset($_SESSION['matricula'])){
-            
-         }else{
-            echo "<script>window.location='index.php';</script>"; 
-         }
+
+    session_start();
+    include("conexion.php");
+    if (isset($_SESSION['matricula'])) {
+    } else {
+        echo "<script>window.location='index.php';</script>";
+    }
     ?>
 
     <meta charset="utf-8">
@@ -53,27 +52,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <a class="navbar-brand topnav" href="#"><font size="15%" color="#64a36f"><strong>LOBOAULA</strong></font></a>
+                <a class="navbar-brand topnav" href="#">
+                    <font size="15%" color="#64a36f"><strong>LOBOAULA</strong></font>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li>
-                        <a href="streaming.php"><span class="glyphicon glyphicon-th-large" aria-hidden="true"> Menu</span></a>
+                        <a href="streaming.php"><span class="glyphicon glyphicon-th-large" aria-hidden="true">
+                                Menu</span></a>
                     </li>
-                    <ul class="nav navbar-top-links navbar-right">  
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  <?php echo $_SESSION['nombre']; ?> <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        
-                        <li>
-                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i>Cerrar sesión</a>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                                <?php echo $_SESSION['nombre']; ?> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="logout.php"><i class="fa fa-fw fa-power-off"></i>Cerrar sesión</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
-          
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -81,23 +84,15 @@
         <!-- /.container -->
     </nav>
 
-
     <!-- Header -->
-   
-    <div class="intro-header">
-    <br>
-        
-                                                 
-                            
-                            <iframe width="900" height="800" src="http://cdn.livestream.com/embed/loboaula?layout=5&browseMode=true&height=310&width=640" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe><div style="font-size: 11px;padding-top:10px;text-align:center;width:640px">Watch <a href=http://original.livestream.com/?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks title=live streaming video></a><a href=http://original.livestream.com/proyectosti?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks title=Watch proyectosti at livestream.com></a></div>
-                        
-      
-    </div>
-   
-        
 
+    <div class="intro-header">
+        <br>
+        <iframe width="900" height="800" src="http://cdn.livestream.com/embed/loboaula?layout=5&browseMode=true&height=310&width=640" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>
+        <div style="font-size: 11px;padding-top:10px;text-align:center;width:640px">Watch <a href=http://original.livestream.com/?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks title=live streaming video></a><a href=http://original.livestream.com/proyectosti?utm_source=lsplayer&amp;utm_medium=embed&amp;utm_campaign=footerlinks title=Watch proyectosti at livestream.com></a></div>
+    </div>
     <!-- Footer -->
-      <footer>
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -114,17 +109,17 @@
                             <a href="http://www.cs.buap.mx/contacto.php">Contacto</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Ulises Antonio Hernandez Mendoza. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; Ulises Antonio Hernandez Mendoza. All Rights
+                        Reserved</p>
                 </div>
             </div>
         </div>
     </footer>
- 
-      <!-- jQuery -->
+
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
-  

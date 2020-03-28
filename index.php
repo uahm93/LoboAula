@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-     <?php
-     session_start();
-     include ("conexion.php");
-     if(isset($_SESSION['matricula'])){
-      echo "<script>window.location='streaming.php';</script>"; 
-     }
-      ?>
+    <?php
+    session_start();
+    include("conexion.php");
+    if (isset($_SESSION['matricula'])) {
+        echo "<script>window.location='streaming.php';</script>";
+    }
+    ?>
 
- <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,7 +50,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#"><font size="15%" color="#64a36f"><strong>LOBOAULA</strong></font></a>
+                <a class="navbar-brand topnav" href="#">
+                    <font size="15%" color="#64a36f"><strong>LOBOAULA</strong></font>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -61,7 +63,7 @@
                     <li>
                         <a href="profesores.php"><span class="glyphicon glyphicon-user" aria-hidden="true"> Profesores</span></a>
                     </li>
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -71,11 +73,11 @@
 
 
     <!-- Header -->
-   
+
     <div class="intro-header">
-    <br>
+        <br>
         <div class="container">
-         <div class="col-md-8">
+            <div class="col-md-8">
 
                 <div class="row carousel-holder">
 
@@ -91,8 +93,8 @@
                                 <div class="item active">
                                     <img class="slide-image" src="img/1.jpg" alt="">
                                     <div class="carousel-caption">
-                                    <h3>Cursos en linea</h3>
-                                        
+                                        <h3>Cursos en linea</h3>
+
                                     </div>
                                 </div>
                                 <div class="item">
@@ -115,24 +117,24 @@
                         </div>
                     </div>
 
-</div>
-        </div>
-         <div class="col-md-4">
-               <div class="login-panel panel panel-default">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="login-panel panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Favor de ingresar</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method="POST" action="validaruser.php" >
+                        <form role="form" method="POST" action="validaruser.php">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Matricula" name="matricula" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Contraseña" name="pw1"  type="password" value="">
+                                    <input class="form-control" placeholder="Contraseña" name="pw1" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Clave de acceso" name="clave"  type="text" value="">
+                                    <input class="form-control" placeholder="Clave de acceso" name="clave" type="text" value="">
                                 </div>
                                 <button type="submit" class="btn btn-lg btn-success btn-block" name="entrar">Entrar</button><br>
                                 <font color="grey">¿Aún no estas registrado?</font><br>
@@ -140,42 +142,46 @@
                                 </button>
 
                                 <!-- Change this to a button or input when using this as a form -->
-                                
+
                             </fieldset>
                         </form>
                     </div>
-                    </div>
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><font color="grey">Nuevo usuario</font></h4>
-      </div>
-      <div class="modal-body">
-                  
-                    <div class="panel-body">
-                        <form role="form" method="POST" action="Qinsertaruser.php">
-                            <fieldset>
-                                      
-                                      <div class="alert alert-block"><font color="orange">
-                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <span class="label label-warning">Atenciòn</span><br>
-                                    Pedir autorización al profesor para poder acceder
-                                    </div></font>
-                                 
-                                 <input class="form-control" placeholder="Nombre(s)" name="nombre" type="text" autofocus>
-                                 </div>
-                                 <div class="form-group">
+                </div>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <font color="grey">Nuevo usuario</font>
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="panel-body">
+                                    <form role="form" method="POST" action="Qinsertaruser.php">
+                                        <fieldset>
+
+                                            <div class="alert alert-block">
+                                                <font color="orange">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                                    <span class="label label-warning">Atenciòn</span><br>
+                                                    Pedir autorización al profesor para poder acceder
+                                            </div>
+                                            </font>
+
+                                            <input class="form-control" placeholder="Nombre(s)" name="nombre" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
                                     <input class="form-control" placeholder="Apellido paterno" name="a_paterno" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Apellido materno" name="a_materno" type="text" autofocus>
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <input class="form-control" placeholder="Matricula" name="matricula" type="text" autofocus>
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <input class="form-control" placeholder="Ingresa una contraseña" name="pw1" id="pw1" type="password" autofocus required="Campo obligatorio">
                                 </div>
                                 <div class="form-group">
@@ -183,26 +189,26 @@
                                     <div id="error2"><br></div>
                                 </div><br>
                                 <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
-                        </form> 
-                    </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                
+                                </form>
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+
                             </fieldset>
-                        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        
-      </div>
-    </div>
-  </div> 
-</div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+                        </div>
+                    </div>
                 </div>
-         </div>
-
-
+            </div>
         </div>
-        <a  name="services"></a>
+    </div>
+
+
+    </div>
+    <a name="services"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -210,9 +216,10 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <font color="grey"><h2 class="section-heading">Clases en vivo<br>con la tecnologia streaming</h2>
-                    <p class="lead">Asiste a clases sin la necesidad de ir a una aula, con la tecnologia streaming puedes ver cursos en vivo o ver 
-                    los que ya han sido transmitidos</p>
+                    <font color="grey">
+                        <h2 class="section-heading">Clases en vivo<br>con la tecnologia streaming</h2>
+                        <p class="lead">Asiste a clases sin la necesidad de ir a una aula, con la tecnologia streaming puedes ver cursos en vivo o ver
+                            los que ya han sido transmitidos</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/5.jpg" alt="">
@@ -225,7 +232,7 @@
     </div>
     <!-- /.content-section-a -->
 
-   
+
 
     <!-- Footer -->
     <footer>
@@ -255,11 +262,10 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/misfunciones.js"></script>
-  
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
-  

@@ -43,7 +43,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#"><font size="15%" color="#191970"><strong>BUAP</strong></font></a>
+                <a class="navbar-brand topnav" href="#">
+                    <font size="15%" color="#191970"><strong>BUAP</strong></font>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -51,7 +53,7 @@
                     <li>
                         <a href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"> Inicio</span></a>
                     </li>
-                    
+
                     <li>
                         <a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"> Investigadores</span></a>
                     </li>
@@ -64,66 +66,66 @@
 
 
     <!-- Header -->
-   
+
     <div class="intro-header">
-    <br>
-        <h3><font color="grey">Lista de investigaciones</h3>
+        <br>
+        <h3>
+            <font color="grey">Lista de investigaciones
+        </h3>
         <div class="container">
-         <div class="col-md-12">
+            <div class="col-md-12">
 
-              <div class="panel panel-default">
-                        <div class="panel-heading">
-                           <font color="grey"> Lista de proyectos
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <font color="grey"> Lista de proyectos
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Id del articulo</th>
+                                        <th>Nombre del investigador</th>
+                                        <th>Nombre del articulo</th>
+                                        <th>Fecha del articulo</th>
+                                        <th>Articulo</th>
+                                    </tr>
+                                </thead>
+                                <?php
+                                include("conexion.php");
+
+                                echo "<tbody>";
+                                $result2 = $conect->query("SELECT * FROM inves ");
+                                while ($row = $result2->fetch_array(MYSQLI_ASSOC)) {
+                                    echo " <tr class='odd gradeX'>";
+                                    echo "<td>$row[id_autor]</td>";
+                                    echo "<td>$row[nombre_autor]</td>";
+                                    echo "<td>$row[nombre_articulo]</td>";
+
+                                    echo "<td>$row[fecha]</td>";
+                                    echo "<td>$row[articulo]</td>";
+
+
+                                    echo "</tr>";
+                                }
+
+                                $conect->close();
+                                echo "</tbody>";
+
+
+                                ?>
+
+                            </table>
+
                         </div>
-                        <!-- /.panel-heading -->
-                         <div class="panel-body">
-                            <div class="dataTable_wrapper">
-                                <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>Id del articulo</th>
-                                            <th>Nombre del investigador</th>
-                                            <th>Nombre del articulo</th>
-                                            <th>Fecha del articulo</th>
-                                            <th>Articulo</th>                                           
-                                        </tr>
-                                    </thead>
-                                    <?php
-                                    include ("conexion.php");
-                                    
-                     echo "<tbody>";
-                     $result2 = $conect->query("SELECT * FROM inves ");                 
-                     while($row = $result2->fetch_array(MYSQLI_ASSOC))
-                    {                   
-                     echo " <tr class='odd gradeX'>";
-                     echo "<td>$row[id_autor]</td>";
-                     echo "<td>$row[nombre_autor]</td>";                    
-                     echo "<td>$row[nombre_articulo]</td>";
-                                                          
-                     echo "<td>$row[fecha]</td>";
-                     echo "<td>$row[articulo]</td>";
-                     
-                    
-                     echo "</tr>";
-                     
-                    }
-                     
-                     $conect->close();
-                echo "</tbody>";
-                      
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
 
-                      ?>
-                                 
-                                </table>
-               
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>  
-
+            </div>
         </div>
-     </div>   
-   </div>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -147,11 +149,11 @@
             </div>
         </div>
     </footer>
- 
+
     </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -166,15 +168,14 @@
     <script src="bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
 
     <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
                 responsive: true
+            });
         });
-    });
     </script>
 
 
 </body>
 
 </html>
-  
